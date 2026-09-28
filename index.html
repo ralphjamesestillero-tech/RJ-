@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrailBlaze Adventure Tours — Book a Hike</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">🥾 TrailBlaze <span>Adventure Tours</span></div>
+      <p class="tagline">Guided day hikes across the Philippines' best trails</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="layout">
+
+      <!-- LEFT: trail info + live weather (API data) -->
+      <section class="panel weather-panel" aria-labelledby="weather-heading">
+        <h2 id="weather-heading">Trail &amp; Live Weather</h2>
+
+        <label for="trailSelect">Choose a trail</label>
+        <select id="trailSelect" name="trailSelect"></select>
+
+        <p id="trailDesc" class="trail-desc"></p>
+
+        <div id="weatherCard" class="weather-card" aria-live="polite">
+          <p class="muted">Loading current weather…</p>
+        </div>
+
+        <div id="forecastNote" class="forecast-note" hidden></div>
+
+        <p class="api-credit">Live weather data from <a href="https://open-meteo.com" target="_blank" rel="noopener">Open-Meteo</a> (free, no API key required).</p>
+      </section>
+
+      <!-- RIGHT: booking form -->
+      <section class="panel form-panel" aria-labelledby="form-heading">
+        <h2 id="form-heading">Book Your Hike</h2>
+
+        <form id="bookingForm" novalidate>
+          <div class="field">
+            <label for="name">Full name *</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address *</label>
+            <input type="email" id="email" name="email" required placeholder="you@example.com">
+            <p class="hint">Your receipt (PDF) will be sent to this address.</p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxxx">
+          </div>
+
+          <div class="field">
+            <label for="date">Preferred hike date *</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+
+          <div class="field">
+            <label for="hikers">Number of hikers *</label>
+            <input type="number" id="hikers" name="hikers" min="1" max="20" value="1" required>
+          </div>
+
+          <div class="field">
+            <label for="requests">Special requests</label>
+            <textarea id="requests" name="requests" rows="3" placeholder="Dietary needs, pickup point, etc. (optional)"></textarea>
+          </div>
+
+          <button type="submit" id="submitBtn" class="btn-primary">Confirm Booking</button>
+
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>TrailBlaze Adventure Tours — student midterm project. Not a real booking service.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
