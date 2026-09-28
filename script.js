@@ -10,7 +10,7 @@
 // ---- 1. PASTE YOUR DEPLOYED APPS SCRIPT WEB APP URL HERE ----
 // Deploy Code.gs as a Web App ("Execute as: Me", "Who has access: Anyone"),
 // then paste the resulting /exec URL below.
-const SCRIPT_URL ="https://script.google.com/macros/s/AKfycbwrBx1W9XBqd8IMOHhpxaIeFL9ACsCCkb9rWMzJEqPP688LqJUeu5bJpWj7A3PNbvQj/exec"
+const SCRIPT_URL ="https://script.google.com/macros/s/AKfycbytqulgm41hf5nkS387fhEMPpQzOD4kLU2VYFtt7mcciukF3976DJhUSgG9iQ26hP2E/exec"
 
 // ---- Trail catalogue (coordinates used for the weather API) ----
 const TRAILS = [
